@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PDF Question Answering</title>
+  </head>
+  <body>
+    <h1>PDF Question Answering</h1>
+    
+    <form method="post" enctype="multipart/form-data">
+      <label for="pdf_file">Upload PDF:</label>
+      <input type="file" id="pdf_file" name="pdf_file"><br><br>
+      
+      <label for="question">Enter your question:</label>
+      <input type="text" id="question" name="question"><br><br>
+      
+      <input type="submit" value="Submit">
+    
+    </form>
+    {% if answer %}
+    <h2>Answer:</h2>
+    <p>{{ answer }}</p>
+    {% endif %}
+    {% if question %}
+    <h2>Question:</h2>
+    <p>{{ question }}</p>
+    {% endif %}
+  </body>
+</html>
